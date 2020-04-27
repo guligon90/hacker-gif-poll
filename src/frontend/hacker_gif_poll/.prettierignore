@@ -1,0 +1,3 @@
+# prettier does weird things with template strings
+*.query.js
+*.fragment.js

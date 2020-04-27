@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+.app {
+  // do not hide content and allow proper scrolling when viewheight < content size
+  margin-top: $app-nav-height;
+}
+
+.menu {
+  height: $app-nav-height;
+}

@@ -1,0 +1,11 @@
+
+# Django-related dependencies
+Django==3.0.5
+graphene-django==2.9.1
+
+# HTTP-related dependencies
+urllib3==1.25.9
+certifi==2020.4.5.1
+
+# PostgreSQL-related depedencies
+psycopg2==2.8.5

@@ -1,0 +1,26 @@
+# IDE generated files
+\.idea/
+graphql\.config\.json
+.vscode/
+
+# Environment
+env/
+venv/
+
+# Python Cache
+__pycache__
+.pytest_cache/
+*-env
+.coverage
+coverage\.xml
+unittest\.xml
+coverage/
+
+# Node modules
+node_modules/
+
+# Deliveries
+deliveries/
+
+# SQLite related
+db.sqlite3
