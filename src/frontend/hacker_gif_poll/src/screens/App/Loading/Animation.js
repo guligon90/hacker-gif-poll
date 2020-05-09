@@ -1,23 +1,25 @@
 import React from 'react';
-import { int, string } from 'prop-types';
+import { number, string } from 'prop-types';
 import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
-const Animation = ({ type, hexColor, height, width, timeout }) => (
+const Animation = ({ type, hexColor, height, width, timeout }) => {
   /*
     Loader component documentation: https://www.npmjs.com/package/react-loader-spinner
     Oval demo: https://mhnpd.github.io/react-loader-spinner/?path=/story/loader--oval
   */
-  <>
-    <Loader
-      type={type}
-      color={hexColor}
-      height={height}
-      width={width}
-      timeout={timeout}
-    />
-  </>
-);
+  return (
+    <>
+      <Loader
+        type={type}
+        color={hexColor}
+        height={height}
+        width={width}
+        timeout={timeout}
+      />
+    </>
+  );
+};
 
 Animation.defaultProps = {
   type: 'Oval',
@@ -30,9 +32,9 @@ Animation.defaultProps = {
 Animation.propTypes = {
   type: string,
   hexColor: string,
-  height: int,
-  width: int,
-  timeout: int,
+  height: number,
+  width: number,
+  timeout: number,
 };
 
 export default Animation;
