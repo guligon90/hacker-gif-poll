@@ -12,7 +12,7 @@ const renderLoading = () => (
       fluid
       className="vh-100 d-flex flex-column no-gutters p-0 flex-fill overflow-auto justify-content-center align-items-center"
     >
-      <p>Carregando...</p>
+      <p className="h4">Loading</p>
       <Animation />
     </Container>
   </>

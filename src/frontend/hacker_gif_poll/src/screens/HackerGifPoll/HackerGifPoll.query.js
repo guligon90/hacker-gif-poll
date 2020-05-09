@@ -19,6 +19,7 @@ export default graphql`
           duration
           preview
           size
+          url
         }
       }
     }

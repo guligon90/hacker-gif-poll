@@ -1,31 +1,43 @@
 import React from 'react';
 
-import { Container } from 'reactstrap';
+import { CardColumns } from 'reactstrap';
 
-import { object } from 'prop-types';
-
+import HackerGifCard from '../../components/HackerGifCard';
 import Main from '../App/Main';
 
-const HackerGifPoll = ({ data }) => {
-  // TODO: Implement GIF polling here
+const generateHackerGifCards = (hackerGifData) => {
+  return hackerGifData.map((resultItem) => {
+    const { created, itemurl, title, media } = resultItem;
+
+    // MEDIUMGIF format is recommended by the Tenor
+    // API for preview in desktop-like environments
+    const gif = media
+      ? media.filter((gifItem) => gifItem.gif_format === 'MEDIUMGIF')[0]
+      : null;
+
+    return (
+      <HackerGifCard
+        key={created}
+        createdIn={created}
+        gif={gif}
+        itemurl={itemurl}
+        title={title}
+      />
+    );
+  });
+};
+
+const HackerGifPoll = (data) => {
+  const hackerGifData =
+    data && data.hacker_gifs ? data.hacker_gifs.results : [];
+
   return (
     <Main>
-      <Container
-        fluid
-        className="d-flex flex-column no-gutters p-0 flex-fill overflow-auto"
-      >
-        {data}
-      </Container>
+      <CardColumns bg="dark">
+        {generateHackerGifCards(hackerGifData)}
+      </CardColumns>
     </Main>
   );
-};
-
-HackerGifPoll.defaultProps = {
-  data: undefined,
-};
-
-HackerGifPoll.propTypes = {
-  data: object,
 };
 
 export default HackerGifPoll;
