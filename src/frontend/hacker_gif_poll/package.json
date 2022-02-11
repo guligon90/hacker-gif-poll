@@ -47,7 +47,7 @@
         "jest-enzyme": "^7.1.1",
         "jest-sonar-reporter": "^2.0.0",
         "license-to-fail": "^3.0.0",
-        "node-sass": "^4.12.0",
+        "node-sass": "^7.0.0",
         "prettier": "^2.0.5",
         "prop-types": "^15.7.2",
         "react-scripts": "^3.4.0",
