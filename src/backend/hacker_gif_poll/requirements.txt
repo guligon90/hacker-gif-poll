@@ -5,7 +5,7 @@ graphene-django==2.9.1
 
 # HTTP-related dependencies
 urllib3==1.26.5
-certifi==2020.4.5.1
+certifi==2022.12.7
 
 # PostgreSQL-related depedencies
 psycopg2==2.8.5
